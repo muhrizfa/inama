@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+:root {
+    /* Color */
+    --inama-blue: #69CAF4;
+    --inama-green: #9DCB4F;
+    --inama-yellow: #F7F142;
+    --inama-orange: #FA9E31;
+    --inama-red: #F02C54;
+    --inama-purple: #A159A3;
+    --inama-black: #202020;
+    --inama-gray-primary: #CCCCCC;
+    --inama-gray-secondary: #EBEBEB;
+    /* Font */
+    --inama-nunito: 'Nunito', sans-serif;
+    /* Dekstop Text */
+    --inama-headline: normal bold 40px/48px 'Nunito', sans-serif;
+    --inama-title-b: normal bold 24px/40px 'Nunito', sans-serif;
+    --inama-title: normal normal 24px/40px 'Nunito', sans-serif;
+    --inama-subtitle-b: normal bold 18px/28px 'Nunito', sans-serif;
+    --inama-subtitle: normal normal 18px/28px 'Nunito', sans-serif;
+    --inama-callout: normal bold 16px/19px 'Nunito', sans-serif;
+    --inama-body-txt: normal normal 16px/28px 'Nunito', sans-serif;
+    --inama-label: normal normal 12px/24px 'Nunito', sans-serif;
+    --inama-caption: normal normal 14px/24px 'Nunito', sans-serif;
+    /* Mobile Text */
+    --inama-m-headline: normal bold 24px/40px 'Nunito', sans-serif;
+    --inama-m-title-b: normal bold 20px/28px 'Nunito', sans-serif;
+    --inama-m-title: normal normal 20px/28px 'Nunito', sans-serif;
+    --inama-m-subtitle-b: normal bold 18px/24px 'Nunito', sans-serif;
+    --inama-m-subtitle: normal normal 18px/24px 'Nunito', sans-serif;
+    --inama-m-callout: normal bold 16px/24px 'Nunito', sans-serif;
+    --inama-m-body-txt: normal normal 16px/28px 'Nunito', sans-serif;
+    --inama-m-label: normal bold 14px/20px 'Nunito', sans-serif;
+    --inama-m-caption: normal normal 14px/20px 'Nunito', sans-serif;
+}
+
+.btn {
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.btn-default-square {
+    background: linear-gradient(90deg, var(--inama-blue) -90.14%, #A0FFF9 295.33%);
+    box-shadow: 0px 10px 25px rgba(106, 201, 242, 0.25);
+    color: white;
+    border-radius: 4px;
+}
+
+.btn-default-round {
+    background: white;
+    color: var(--inama-blue);
+    border: 1px solid var(--inama-blue);
+    border-radius: 100px;
+}
+
+.btn-hover-round {
+    background: linear-gradient(90deg, #6AC9F2 -90.14%, #A0FFF9 295.33%);
+    box-shadow: 0px 8px 16px rgba(201, 216, 223, 0.32);
+    color: white;
+    border-radius: 100px;
+}
+
+.btn-inactive {
+    background: var(--inama-gray-secondary);
+    color: var(--inama-gray-primary);
+    border-radius: 100px;
+}
+
+.btn-inactive-2 {
+    background: white;
+    color: var(--inama-gray-primary);
+    border: 1px solid var(--inama-gray-primary);
+    border-radius: 100px;
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+}
+
+header {
+    height: 6rem;
+}
+
+main {
+    min-height: fit-content;
+    padding-bottom: 2.5rem;
+    /* Footer height */
+}
+
+footer {
+    position: absolute;
+    bottom: 1;
+    width: 100%;
+    /* Footer height */
+}
+
+/* ==================
+HEADER SECTION 
+==================== */
+
+/* NAVIGATION BAR CUSTOM */
+
+.navbar {
+    background: white;
+    border: 1px solid var(--inama-gray-secondary);
+    box-shadow: 0px 8px 16px rgba(201, 216, 223, 0.32);
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.navbar .navbar-brand {
+    padding: 0px;
+}
+
+.navbar .nav-item {
+    margin-right: 1em;
+}
+
+.navbar .nav-link {
+    text-decoration: none;
+    color: var(--inama-black)!important;
+}
+
+.navbar .form-inline a {
+    font-weight: bold;
+    color: #6AC9F2;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+}
+
+.navbar .form-inline a {
+    margin-left: 15px;
+}
+
+.navbar .form-inline span {
+    margin-left: 15px;
+    padding-bottom: 0.10rem;
+}
+
+.navbar .btn-default-square {
+    padding: 0.5em 2em;
+    box-shadow: 0px 2px 6px rgba(106, 201, 242, 0.25);
+}
+
+/* ==================
+FOOTER SECTION 
+==================== */
+
+footer {
+    background: var(--inama-black);
+    color: white;
+}
+
+footer .top-inner {
+    padding-top: 1.2rem;
+    padding-bottom: 2rem;
+}
+
+footer .footer-brand img {
+    margin-bottom: 1.5rem;
+}
+
+footer .footer-social {
+    font-size: 0.6rem;
+}
+
+footer .footer-social * {
+    margin-right: 0.2em;
+    color: white;
+}
+
+footer .footer-menu * {
+    margin-bottom: 1rem;
+}
+
+footer .footer-menu .footer-title {
+    color: var(--inama-green);
+    font-size: 1.1em;
+}
+
+footer .footer-menu .list-group * {
+    margin-bottom: 1rem;
+}
+
+footer .footer-menu .list-group li {
+    list-style: none;
+}
+
+footer .footer-menu .list-group li a {
+    font-size: 0.94em;
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-disclaimer h6 {
+    font-weight: 400;
+    font-size: 1.1em;
+}
+
+footer .footer-disclaimer p {
+    font-size: 0.78em;
+}
+
+footer .divider-gray {
+    width: 100%;
+    height: 1px;
+    opacity: 0.5;
+    background: white;
+}
+
+footer .bottom-inner {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+footer .bottom-inner span {
+    font-size: 0.78em;
+}
