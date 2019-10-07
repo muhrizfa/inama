@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
 :root {
     /* Color */
-    --inama-blue: #69CAF4;
+    --inama-blue: #6AC9F2;
     --inama-green: #9DCB4F;
     --inama-yellow: #F7F142;
     --inama-orange: #FA9E31;
@@ -16,23 +17,53 @@
     --inama-headline: normal bold 40px/48px 'Nunito', sans-serif;
     --inama-title-b: normal bold 24px/40px 'Nunito', sans-serif;
     --inama-title: normal normal 24px/40px 'Nunito', sans-serif;
-    --inama-subtitle-b: normal bold 18px/28px 'Nunito', sans-serif;
-    --inama-subtitle: normal normal 18px/28px 'Nunito', sans-serif;
-    --inama-callout: normal bold 16px/19px 'Nunito', sans-serif;
-    --inama-body-txt: normal normal 16px/28px 'Nunito', sans-serif;
-    --inama-label: normal normal 12px/24px 'Nunito', sans-serif;
-    --inama-caption: normal normal 14px/24px 'Nunito', sans-serif;
+    --inama-subtitle-b: normal bold 18px/28px 'Lato', sans-serif;
+    --inama-subtitle: normal normal 18px/28px 'Lato', sans-serif;
+    --inama-callout: normal bold 16px/19px 'Lato', sans-serif;
+    --inama-body-txt: normal normal 16px/28px 'Lato', sans-serif;
+    --inama-label: normal normal 14px/24px 'Lato', sans-serif;
+    --inama-caption: normal normal 14px/24px 'Lato', sans-serif;
     /* Mobile Text */
     --inama-m-headline: normal bold 24px/40px 'Nunito', sans-serif;
     --inama-m-title-b: normal bold 20px/28px 'Nunito', sans-serif;
     --inama-m-title: normal normal 20px/28px 'Nunito', sans-serif;
-    --inama-m-subtitle-b: normal bold 18px/24px 'Nunito', sans-serif;
-    --inama-m-subtitle: normal normal 18px/24px 'Nunito', sans-serif;
-    --inama-m-callout: normal bold 16px/24px 'Nunito', sans-serif;
-    --inama-m-body-txt: normal normal 16px/28px 'Nunito', sans-serif;
-    --inama-m-label: normal bold 14px/20px 'Nunito', sans-serif;
-    --inama-m-caption: normal normal 14px/20px 'Nunito', sans-serif;
+    --inama-m-subtitle-b: normal bold 18px/24px 'Lato', sans-serif;
+    --inama-m-subtitle: normal normal 18px/24px 'Lato', sans-serif;
+    --inama-m-callout: normal bold 16px/24px 'Lato', sans-serif;
+    --inama-m-body-txt: normal normal 16px/28px 'Lato', sans-serif;
+    --inama-m-label: normal bold 14px/20px 'Lato', sans-serif;
+    --inama-m-caption: normal normal 14px/20px 'Lato', sans-serif;
 }
+
+/* ==================
+GRID SYSTEM
+==================== */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+header {
+    padding-top: 4.5rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 1;
+    width: 100%;
+    height: fit-content;
+}
+
+/* ==================
+GLOBAL CODE
+==================== */
 
 .btn {
     font-size: 1em;
@@ -41,10 +72,17 @@
 }
 
 .btn-default-square {
+    font: var(--inama-callout);
     background: linear-gradient(90deg, var(--inama-blue) -90.14%, #A0FFF9 295.33%);
     box-shadow: 0px 10px 25px rgba(106, 201, 242, 0.25);
     color: white;
     border-radius: 4px;
+}
+
+.btn-default-square:hover {
+    background: var(--inama-blue);
+    box-shadow: 0px 8px 16px rgba(201, 216, 223, 0.32);
+    color: white;
 }
 
 .btn-default-round {
@@ -55,7 +93,7 @@
 }
 
 .btn-hover-round {
-    background: linear-gradient(90deg, #6AC9F2 -90.14%, #A0FFF9 295.33%);
+    background: linear-gradient(90deg, var(--inama-blue) -90.14%, #A0FFF9 295.33%);
     box-shadow: 0px 8px 16px rgba(201, 216, 223, 0.32);
     color: white;
     border-radius: 100px;
@@ -72,28 +110,6 @@
     color: var(--inama-gray-primary);
     border: 1px solid var(--inama-gray-primary);
     border-radius: 100px;
-}
-
-.wrapper {
-    position: relative;
-    min-height: 100%;
-}
-
-header {
-    height: 6rem;
-}
-
-main {
-    min-height: fit-content;
-    padding-bottom: 2.5rem;
-    /* Footer height */
-}
-
-footer {
-    position: absolute;
-    bottom: 1;
-    width: 100%;
-    /* Footer height */
 }
 
 /* ==================
@@ -119,22 +135,22 @@ HEADER SECTION
 }
 
 .navbar .nav-link {
+    font: var(--inama-body-txt);
     text-decoration: none;
     color: var(--inama-black)!important;
 }
 
 .navbar .form-inline a {
+    font: var(--inama-callout);
+    color: var(--inama-blue);
     font-weight: bold;
-    color: #6AC9F2;
     letter-spacing: 0.04em;
     text-decoration: none;
-}
-
-.navbar .form-inline a {
     margin-left: 15px;
 }
 
 .navbar .form-inline span {
+    font: var(--inama-body-txt);
     margin-left: 15px;
     padding-bottom: 0.10rem;
 }
@@ -142,6 +158,118 @@ HEADER SECTION
 .navbar .btn-default-square {
     padding: 0.5em 2em;
     box-shadow: 0px 2px 6px rgba(106, 201, 242, 0.25);
+}
+
+/* ==================
+MAIN SECTION 
+==================== */
+
+main section {
+    padding: 1rem 1rem 4rem 1rem;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding-left: 0;
+}
+
+.breadcrumb * {
+    font: var(--inama-label);
+    color: var(--inama-black);
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    color: var(--inama-blue);
+    content: "\203A ";
+}
+
+.img-decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.title-page-nav {
+    position: relative;
+}
+
+.title-page-nav h1 {
+    font: var(--inama-headline);
+    width: 5.8em;
+    display: inline-block;
+}
+
+.title-page-nav img {
+    position: absolute;
+    bottom: 1.54em;
+}
+
+.heading-page p {
+    font: var(--inama-body-txt);
+}
+
+/* CONTACT CUSTOMIZE */
+
+.contact {
+    background-color: rgba(204, 240, 255, 0.1);
+    position: relative;
+}
+
+.contact .contact-form .form-group label {
+    font: var(--inama-label);
+    margin-bottom: 0;
+}
+
+.contact .contact-form .form-group input, .contact .form-group textarea {
+    font: var(--inama-body-txt);
+    background: white;
+    border: 1px solid var(--inama-gray-secondary);
+    box-sizing: border-box;
+    box-shadow: 0px 8px 16px rgba(201, 216, 223, 0.32);
+    border-radius: 4px;
+    resize: none;
+}
+
+.contact .contact-form .form-group input {
+    height: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1.2rem;
+}
+
+.contact .contact-form .form-group input::placeholder, .contact .form-group textarea::placeholder {
+    color: var(--inama-gray-primary);
+}
+
+.contact .contact-form .btn {
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.contact .office-information h6 {
+    font: var(--inama-subtitle-b);
+}
+
+.contact .fa-ul {
+    font-size: 0.8rem;
+}
+
+.contact ul.fa-ul li {
+    margin-left: -0.8em;
+}
+
+.contact ul.fa-ul li .fa-li {
+    color: var(--inama-green);
+    line-height: 2.4em;
+}
+
+.contact ul.fa-ul li div {
+    font: var(--inama-body-txt);
+    max-width: 257px;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
 }
 
 /* ==================
@@ -154,12 +282,21 @@ footer {
 }
 
 footer .top-inner {
-    padding-top: 1.2rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+footer .footer-brand {
+    margin-bottom: 1rem;
 }
 
 footer .footer-brand img {
     margin-bottom: 1.5rem;
+}
+
+footer .footer-brand p {
+    font: var(--inama-label);
+    font-size: 1em;
 }
 
 footer .footer-social {
@@ -176,6 +313,7 @@ footer .footer-menu * {
 }
 
 footer .footer-menu .footer-title {
+    font: var(--inama-callout);
     color: var(--inama-green);
     font-size: 1.1em;
 }
@@ -189,18 +327,21 @@ footer .footer-menu .list-group li {
 }
 
 footer .footer-menu .list-group li a {
+    font: var(--inama-label);
     font-size: 0.94em;
     color: white;
     text-decoration: none;
 }
 
 footer .footer-disclaimer h6 {
+    font: var(--inama-title);
     font-weight: 400;
     font-size: 1.1em;
 }
 
 footer .footer-disclaimer p {
-    font-size: 0.78em;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.74em;
 }
 
 footer .divider-gray {
@@ -218,3 +359,73 @@ footer .bottom-inner {
 footer .bottom-inner span {
     font-size: 0.78em;
 }
+
+/* ==================
+MEDIA QUERIES
+==================== */
+
+/* // Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) {
+    main section {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+    .title-page-nav img {
+        position: absolute;
+        bottom: 1.44em;
+    }
+    .img-decoration img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 12rem;
+    }
+    .title-page-nav h1 {
+        font: var(--inama-m-headline);
+    }
+    .heading-page p {
+        font: var(--inama-m-body-txt);
+    }
+    .contact .contact-form .form-group label {
+        font: var(--inama-m-label);
+    }
+    .contact .contact-form .form-group input, .contact .form-group textarea {
+        font: var(--inama-m-body-txt);
+    }
+    .contact .office-information h6 {
+        font: var(--inama-m-subtitle-b);
+    }
+    .contact ul.fa-ul li div {
+        font: var(--inama-m-body-txt);
+    }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .img-decoration img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 18rem;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .img-decoration img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 15rem;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}
